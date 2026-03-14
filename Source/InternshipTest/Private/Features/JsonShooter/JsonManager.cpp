@@ -99,6 +99,7 @@ void AJsonManager::FetchJson()
                         (*LocationArray)[2]->AsNumber()
                     );
 
+                    // JSON rotation is [roll, pitch, yaw], but FRotator expects (pitch, yaw, roll)
                     FRotator Rotation(
                         (*RotationArray)[1]->AsNumber(),
                         (*RotationArray)[2]->AsNumber(),
